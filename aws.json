@@ -1,12 +1,15 @@
 {
-         "AWSEBDockerrunVersion":"1",
-         "Image":{
-            "Name":"juice-shop"
-         },
-         "Ports":[
-            {
-               "ContainerPort":3000,
-               "HostPort":3000
-            }
-         ]
-      }
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "juice-shop"
+  },
+  "Ports": [
+    {
+      "ContainerPort": 3000,
+      "HostPort": 3000
+    }
+  ],
+  "aws:elasticbeanstalk:command": {
+    "CommandTimeout": "6000"
+  }
+}
