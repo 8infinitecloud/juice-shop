@@ -11,6 +11,16 @@ pipeline {
             }
         }
 
+        stage('Build Node.js Application') {
+            steps {
+                script {
+                    // Ejecutar el comando de construcción de Node.js
+                    sh 'npm install'
+                    sh 'npm run build'  // Suponiendo que este comando construye la aplicación
+                }
+            }
+        }
+        
         stage('OWASP Dependency-Check Vulnerabilities') {
             steps {
                 script {
